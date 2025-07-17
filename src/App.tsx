@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useThemeStore } from './store/theme';
 import SEO from './components/SEO';
@@ -7,19 +7,10 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ContentBoxes from './components/ContentBoxes';
 import { About } from './components/About';
-import { Journey } from './components/Journey';
-import { Qualifications } from './components/Qualifications';
-import { Certifications } from './components/Certifications';
 import { Skills } from './components/Skills';
-import { Education } from './components/Education';
-import { Gallery } from './components/Gallery';
-import { CubingContent } from './components/CubingContent';
 import { Blog } from './components/Blog';
 import { BlogDetailPage } from './pages/BlogDetailPage';
-import { FutureGoals } from './components/FutureGoals';
 import { FunFacts } from './components/FunFacts';
-import { Gaming } from './components/Gaming';
-import { Testimonials } from './components/Testimonials';
 import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
@@ -246,7 +237,7 @@ function AppContent() {
         title={seoData[currentSection as keyof typeof seoData]?.title || seoData.home.title}
         description={seoData[currentSection as keyof typeof seoData]?.description || seoData.home.description}
         keywords={seoData[currentSection as keyof typeof seoData]?.keywords || seoData.home.keywords}
-        image="https://akshat17.vercel.app/preview.jpg"
+        image="https://akshat17.vercel.app/preview.png"
         url={`https://akshat17.vercel.app/${currentSection === 'home' ? '' : currentSection}`}
       />
       {showIntro ? (

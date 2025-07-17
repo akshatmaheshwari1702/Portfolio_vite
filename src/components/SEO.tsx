@@ -13,7 +13,7 @@ const SEO: React.FC<SEOProps> = memo(({
   title, 
   description, 
   keywords, 
-  image = "https://akshat17.vercel.app/preview.jpg",
+  image = "https://akshat17.vercel.app/preview.png",
   url = "https://akshat17.vercel.app"
 }) => {
   const siteName = "Akshat Maheshwari - Portfolio";
