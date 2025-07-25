@@ -10,6 +10,7 @@ import {
   Book,
   Gamepad,
   Heart,
+  Bike,
 } from "lucide-react";
 import { cn } from "../lib/utils";
 import type { FunFact } from "../types";
@@ -18,15 +19,15 @@ const funFacts: FunFact[] = [
   {
     id: "1",
     title: "Favorite Tech Stack",
-    description: "TypeScript + React + Tailwind = ❤️",
+    description: "React + Tailwind = ❤️",
     icon: "Code2",
     category: "tech",
   },
   {
     id: "2",
-    title: "Travel Goals",
-    description: "Visited 10 states, aiming for 28!",
-    icon: "Plane",
+    title: "Bike Rides",
+    description: "Visited nearby outer skirts as I started that recently",
+    icon: "Bike",
     category: "travel",
   },
   {
@@ -38,25 +39,25 @@ const funFacts: FunFact[] = [
   },
   {
     id: "4",
-    title: "Gaming Setup",
-    description: "Proud owner of a custom-built gaming PC",
-    icon: "Gamepad",
-    category: "hobby",
-  },
-  {
-    id: "5",
     title: "Music While Coding",
     description: "Lo-fi beats are my coding companion",
     icon: "Music",
     category: "personal",
   },
   {
-    id: "6",
+    id: "5",
     title: "Photography",
     description: "Amateur photographer with a love for landscapes",
     icon: "Camera",
     category: "hobby",
   },
+  // {
+  //   id: "4",
+  //   title: "Gaming Setup",
+  //   description: "Proud owner of a custom-built gaming PC",
+  //   icon: "Gamepad",
+  //   category: "hobby",
+  // },
 ];
 
 const getIcon = (iconName: string) => {
@@ -70,6 +71,7 @@ const getIcon = (iconName: string) => {
     Book,
     Gamepad,
     Heart,
+    Bike,
   };
   return icons[iconName] || Heart;
 };
