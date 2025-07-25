@@ -164,7 +164,8 @@ The portfolio effectively communicates the client's brand identity while maintai
       { name: "CSS", percentage: 70 },
     ],
     contributors: [{ name: "Akshat", profilePic: "/assets/ak.jpeg" }],
-    github: "https://github.com/Mausam5055/papiya",
+    // github: "https://github.com/Mausam5055/papiya",
+    github: "",
     liveDemo: "https://papiya.vercel.app/",
   },
 ];
