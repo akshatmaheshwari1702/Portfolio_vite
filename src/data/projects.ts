@@ -25,8 +25,9 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    name: 'Portfolio V3',
-    description: 'My current portfolio showcasing my latest projects and skills with a modern, responsive design and smooth animations.',
+    name: "Portfolio V3",
+    description:
+      "My current portfolio showcasing my latest projects and skills with a modern, responsive design and smooth animations.",
     detailedDescription: `A sophisticated portfolio website built with React and TypeScript, featuring:
 
 • Modern UI with dark/light mode support
@@ -38,25 +39,24 @@ export const projects: Project[] = [
 • SEO-friendly structure
 
 This portfolio represents my current skills and expertise in modern web development.`,
-    videoPreview: '',
-    imagePreview: '/assets/projects/portfolio v-03/1.png',
-    outerPreviewImage: '/assets/projects/portfolio v-03/1.png',
+    videoPreview: "",
+    imagePreview: "/assets/projects/portfolio v-03/1.png",
+    outerPreviewImage: "/assets/projects/portfolio v-03/1.png",
     technologies: [
-      { name: 'React', percentage: 90 },
-      { name: 'TypeScript', percentage: 85 },
-      { name: 'Tailwind CSS', percentage: 80 },
-      { name: 'Framer Motion', percentage: 75 },
+      { name: "React", percentage: 90 },
+      { name: "TypeScript", percentage: 85 },
+      { name: "Tailwind CSS", percentage: 80 },
+      { name: "Framer Motion", percentage: 75 },
     ],
-    contributors: [
-      { name: 'Akshat', profilePic: '/assets/ak.jpeg' },
-    ],
-    github: 'https://github.com/akshatmaheshwari1702/Portfolio_vite',
-    liveDemo: 'https://akshat17.vercel.app/',
+    contributors: [{ name: "Akshat", profilePic: "/assets/ak.jpeg" }],
+    github: "https://github.com/akshatmaheshwari1702/Portfolio_vite",
+    liveDemo: "https://akshat17.vercel.app/",
   },
   {
     id: 2,
-    name: 'Weather App',
-    description: 'A beautiful weather application built with React that provides real-time weather data with stunning animations and intuitive UI.',
+    name: "Crack It",
+    description:
+      "A beautiful weather application built with React that provides real-time weather data with stunning animations and intuitive UI.",
     detailedDescription: `A feature-rich weather application that offers:
 
 • Real-time weather data from OpenWeather API
@@ -68,26 +68,25 @@ This portfolio represents my current skills and expertise in modern web developm
 • Temperature unit conversion (Celsius/Fahrenheit)
 
 This app demonstrates my ability to integrate external APIs and create engaging user experiences.`,
-    videoPreview: '',
-    imagePreview: '/assets/projects/weather/1.png',
-    outerPreviewImage: '/assets/projects/weather/1.png',
+    videoPreview: "",
+    imagePreview: "/assets/projects/weather/1.png",
+    outerPreviewImage: "/assets/projects/weather/1.png",
     technologies: [
-      { name: 'React', percentage: 90 },
-      { name: 'JavaScript', percentage: 85 },
-      { name: 'CSS', percentage: 80 },
-      { name: 'API Integration', percentage: 85 },
-      { name: 'Animations', percentage: 75 },
+      { name: "React", percentage: 90 },
+      { name: "JavaScript", percentage: 85 },
+      { name: "CSS", percentage: 80 },
+      { name: "API Integration", percentage: 85 },
+      { name: "Animations", percentage: 75 },
     ],
-    contributors: [
-      { name: 'Akshat', profilePic: '/assets/ak.jpeg' },
-    ],
-    github: 'https://github.com/akshatmaheshwari1702',
-    liveDemo: 'https://github.com/akshatmaheshwari1702',
+    contributors: [{ name: "Akshat", profilePic: "/assets/ak.jpeg" }],
+    github: "https://github.com/akshatmaheshwari1702/CrackIt",
+    liveDemo: "crack-it-one.vercel.app",
   },
   {
     id: 3,
-    name: 'YouTube Downloader2',
-    description: 'An enhanced YouTube downloader with a modern web interface, combining Python backend with HTML, CSS, and JavaScript frontend.',
+    name: "Billify",
+    description:
+      "An enhanced YouTube downloader with a modern web interface, combining Python backend with HTML, CSS, and JavaScript frontend.",
     detailedDescription: `A full-stack YouTube video downloader application featuring:
 
 • Modern and responsive web interface
@@ -99,26 +98,25 @@ This app demonstrates my ability to integrate external APIs and create engaging 
 • Background processing for large files
 
 This version provides an intuitive user experience while maintaining powerful download capabilities.`,
-    videoPreview: '',
-    imagePreview: '/assets/projects/you-tube-v-02/1.jpeg',
-    outerPreviewImage: '/assets/projects/you-tube-v-02/1.jpeg',
+    videoPreview: "",
+    imagePreview: "/assets/projects/you-tube-v-02/1.jpeg",
+    outerPreviewImage: "/assets/projects/you-tube-v-02/1.jpeg",
     technologies: [
-      { name: 'Python', percentage: 85 },
-      { name: 'HTML', percentage: 80 },
-      { name: 'CSS', percentage: 75 },
-      { name: 'JavaScript', percentage: 80 },
-      { name: 'FFmpeg', percentage: 85 },
+      { name: "React", percentage: 90 },
+      { name: "JavaScript", percentage: 85 },
+      { name: "CSS", percentage: 80 },
+      { name: "API Integration", percentage: 85 },
+      { name: "Animations", percentage: 75 },
     ],
-    contributors: [
-      { name: 'Akshat', profilePic: '/assets/ak.jpeg' },
-    ],
-    github: 'https://github.com/akshatmaheshwari1702',
-    liveDemo: '',
+    contributors: [{ name: "Akshat", profilePic: "/assets/ak.jpeg" }],
+    github: "https://github.com/akshatmaheshwari1702/Billify",
+    liveDemo: "billify-beta.vercel.app",
   },
   {
     id: 4,
-    name: 'YouTube Downloader1',
-    description: 'A Python-based YouTube video downloader with FFmpeg integration for high-quality video processing and format conversion.',
+    name: "YouTube Downloader1",
+    description:
+      "A Python-based YouTube video downloader with FFmpeg integration for high-quality video processing and format conversion.",
     detailedDescription: `A powerful YouTube video downloader built with Python, featuring:
 
 • FFmpeg integration for video processing and format conversion
@@ -129,24 +127,23 @@ This version provides an intuitive user experience while maintaining powerful do
 • Support for playlists and channels
 
 This tool demonstrates efficient video processing and handling of YouTube's API.`,
-    videoPreview: '',
-    imagePreview: '/assets/projects/You-tube-v01/1.png',
-    outerPreviewImage: '/assets/projects/You-tube-v01/1.png',
+    videoPreview: "",
+    imagePreview: "/assets/projects/You-tube-v01/1.png",
+    outerPreviewImage: "/assets/projects/You-tube-v01/1.png",
     technologies: [
-      { name: 'Python', percentage: 90 },
-      { name: 'FFmpeg', percentage: 85 },
-      { name: 'YouTube-DL', percentage: 80 },
+      { name: "Python", percentage: 90 },
+      { name: "FFmpeg", percentage: 85 },
+      { name: "YouTube-DL", percentage: 80 },
     ],
-    contributors: [
-      { name: 'Akshat', profilePic: '/assets/ak.jpeg' },
-    ],
-    github: 'https://github.com/akshatmaheshwari1702',
-    liveDemo: '',
+    contributors: [{ name: "Akshat", profilePic: "/assets/ak.jpeg" }],
+    github: "https://github.com/akshatmaheshwari1702",
+    liveDemo: "",
   },
   {
     id: 5,
-    name: 'Client Portfolio',
-    description: 'Showcasing the expertise and creativity of papiya, this portfolio highlights their skills, dedication.',
+    name: "Client Portfolio",
+    description:
+      "Showcasing the expertise and creativity of papiya, this portfolio highlights their skills, dedication.",
     detailedDescription: `A modern and responsive portfolio website built for a client, showcasing their professional journey and achievements. The site features:
 
 • Responsive design that works seamlessly across all devices
@@ -157,18 +154,16 @@ This tool demonstrates efficient video processing and handling of YouTube's API.
 • Optimized performance and SEO-friendly structure
 
 The portfolio effectively communicates the client's brand identity while maintaining a clean and professional aesthetic.`,
-    videoPreview: 'https://www.youtube.com/embed/9z46-46o3CE',
-    imagePreview: '/assets/projects/client-portfolio/1.png',
-    outerPreviewImage: '/assets/projects/client-portfolio/1.png',
+    videoPreview: "https://www.youtube.com/embed/9z46-46o3CE",
+    imagePreview: "/assets/projects/client-portfolio/1.png",
+    outerPreviewImage: "/assets/projects/client-portfolio/1.png",
     technologies: [
-      { name: 'JavaScript', percentage: 80 },
-      { name: 'React', percentage: 90 },
-      { name: 'CSS', percentage: 70 },
+      { name: "JavaScript", percentage: 80 },
+      { name: "React", percentage: 90 },
+      { name: "CSS", percentage: 70 },
     ],
-    contributors: [
-      { name: 'Akshat', profilePic: '/assets/ak.jpeg' },
-    ],
-    github: 'https://github.com/Mausam5055/papiya',
-    liveDemo: 'https://papiya.vercel.app/',
+    contributors: [{ name: "Akshat", profilePic: "/assets/ak.jpeg" }],
+    github: "https://github.com/Mausam5055/papiya",
+    liveDemo: "https://papiya.vercel.app/",
   },
-]; 
+];
