@@ -1,9 +1,8 @@
 import React from "react";
-import { motion, useReducedMotion } from "framer-motion";
-import { cn } from "../lib/utils";
+import { motion } from "framer-motion";
+import { aboutData } from "../data/aboutData";
 
 export const About: React.FC = () => {
-  const prefersReducedMotion = useReducedMotion();
   const isMobile = window.innerWidth < 768;
 
   return (
@@ -95,7 +94,7 @@ export const About: React.FC = () => {
               >
                 Hello! I'm{" "}
                 <span className="font-semibold bg-gradient-to-r from-blue-600 to-purple-500 bg-clip-text text-transparent">
-                  Akshat Maheshwari
+                  {aboutData.personal.name}
                 </span>
                 , a Full Stack Developer specializing in{" "}
                 <span className="italic text-purple-600 dark:text-purple-400">
@@ -159,8 +158,8 @@ export const About: React.FC = () => {
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-600/30 to-purple-500/20 mix-blend-overlay" />
                 <img
-                  src="assets/about1.jpeg"
-                  alt="Coding"
+                  src={aboutData.gallery.coding.image}
+                  alt={aboutData.gallery.coding.alt}
                   className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 border-2 border-blue-400/20 rounded-2xl pointer-events-none" />
@@ -169,9 +168,10 @@ export const About: React.FC = () => {
                 whileHover={{ x: isMobile ? 0 : 5 }}
                 className="text-center text-lg font-medium mt-4 text-gray-900 dark:text-white"
               >
-                "Code is art
+                "{aboutData.gallery.coding.quote}"
+                {/* "Code is art
                 <br />
-                in motion"
+                in motion" */}
               </motion.p>
             </motion.div>
 
@@ -190,8 +190,8 @@ export const About: React.FC = () => {
               >
                 <div className="absolute inset-0 bg-gradient-to-b from-purple-600/30 to-blue-500/20 mix-blend-overlay" />
                 <img
-                  src="assets/about2.jpeg"
-                  alt="Art"
+                  src={aboutData.gallery.creativity.image}
+                  alt={aboutData.gallery.creativity.alt}
                   className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 border-2 border-purple-400/20 rounded-2xl pointer-events-none" />
@@ -200,9 +200,7 @@ export const About: React.FC = () => {
                 whileHover={{ x: isMobile ? 0 : 5 }}
                 className="text-center text-lg font-medium mt-4 text-gray-900 dark:text-white"
               >
-                "Creativity is
-                <br />
-                intelligence having fun"
+                "{aboutData.gallery.creativity.quote}"
               </motion.p>
             </motion.div>
           </div>

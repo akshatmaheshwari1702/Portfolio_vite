@@ -7,126 +7,10 @@ import {
   Sparkle,
   CalendarDays,
   ChevronDown,
-  ChevronUp,
-  Plus,
-  Minus,
   X,
 } from "lucide-react";
 import { cn } from "../lib/utils";
-
-interface Certificate {
-  id: string;
-  title: string;
-  organization: string;
-  date: string;
-  credentialId: string;
-  image: string;
-  skills: string[];
-  link: string;
-  description: string;
-}
-
-const certificates: Certificate[] = [
-  {
-    id: "1",
-    title: "AI Tools Workshop",
-    organization: "United Latino Students Association",
-    date: "Feb 2025",
-    credentialId: "28",
-    image: "/assets/certificates/ai.png",
-    skills: ["Generative AI", "Computer Ethics"],
-    link: "https://certx.in/certificate/9318e7f9-0234-4ea4-9390-efad88624b8b227735",
-    description: "Comprehensive training in AI tools and ethical considerations. Hands-on experience with cutting-edge AI technologies. Focus on responsible AI development and implementation"
-  },
-  {
-    id: "2",
-    title: "Career Essentials In Generative AI",
-    organization: "Microsoft and LinkedIn",
-    date: "Feb 2025",
-    credentialId: "MS-GEN-AI-2025",
-    image: "/assets/certificates/microsoft.png",
-    skills: ["Generative AI", "AI Applications", "Industry Best Practices"],
-    link: "https://www.linkedin.com/learning/certificates/7db784f3c327ce91e9eb3d6f84cff388ec4e12fda6e311506a6408600cd1528a",
-    description: "Professional certification in generative AI applications. Industry-standard practices for AI implementation. Practical applications of generative AI in business contexts"
-  },
-  {
-    id: "3",
-    title: "React Hooks Crash Course",
-    organization: "GreatStack",
-    date: "Feb 2025",
-    credentialId: "rhs-",
-    image: "/assets/certificates/react.png",
-    skills: ["CSS", "Tailwind CSS", "HTML", "JavaScript", "React.js", "TypeScript"],
-    link: "https://drive.google.com/file/d/1V-3SCPnPDlf01aGln2tQIIY-qxPTGi9J/view?usp=drive_link",
-    description: "Advanced React hooks implementation and patterns. State management and component lifecycle mastery. Modern React development best practices"
-  },
-  {
-    id: "4",
-    title: "Responsive Web Design",
-    organization: "freeCodeCamp",
-    date: "Feb 2025",
-    credentialId: "fc9",
-    image: "/assets/certificates/react2.png",
-    skills: ["Responsive Design", "CSS Grid", "Flexbox", "Mobile-First"],
-    link: "https://www.freecodecamp.org/certification/fcc9af661c7-fd05-4bb8-bb00-bf761ac42753/responsive-web-design",
-    description: "Comprehensive web design principles and practices. Mobile-first approach to responsive design. Advanced CSS techniques and modern layout systems"
-  },
-  {
-    id: "5",
-    title: "Fundamentals Of AI and Machine Learning",
-    organization: "iNeuron",
-    date: "Sep 2024",
-    credentialId: "AIML-2024-IN",
-    image: "/assets/certificates/aiml.png",
-    skills: ["Artificial Intelligence", "Machine Learning", "Data Science", "Neural Networks"],
-    link: "https://drive.google.com/file/d/16V19EldFv80hgg89-4cMeE6RToSVW49f/view?usp=drive_link",
-    description: "Core concepts of artificial intelligence and machine learning. Practical implementation of ML algorithms. Real-world AI/ML project experience"
-  },
-  {
-    id: "6",
-    title: "Matlab Onramp",
-    organization: "MATLAB Coding",
-    date: "Aug 2024",
-    credentialId: "MATLAB-2024",
-    image: "/assets/certificates/matlab1.png",
-    skills: ["MATLAB", "Data Analysis", "Visualization", "Scientific Computing"],
-    link: "https://drive.google.com/file/d/1V3mrrRxwEdCs8QbpmzHqOQGmQW0FnAzQ/view?usp=drive_link",
-    description: "Comprehensive MATLAB programming fundamentals. Data analysis and visualization techniques. Scientific computing and algorithm implementation"
-  },
-  {
-    id: "7",
-    title: "Simulink Onramp",
-    organization: "MathWorks",
-    date: "Aug 2024",
-    credentialId: "SIMULINK-2024",
-    image: "/assets/certificates/matlab2.png",
-    skills: ["Simulink", "System Modeling", "Simulation", "Control Systems"],
-    link: "https://drive.google.com/file/d/1V1naGyCuS8hYMXr8pRywZoMR7gjuoMOp/view?usp=drive_link",
-    description: "Advanced system modeling and simulation. Dynamic system analysis and design. Integration with MATLAB for comprehensive solutions"
-  },
-  {
-    id: "8",
-    title: "Solvit Hackathon",
-    organization: "Solvit",
-    date: "Mar 2024",
-    credentialId: "SOLVIT-HACK-2024",
-    image: "/assets/certificates/solvit.jpg",
-    skills: ["Problem Solving", "Team Collaboration", "Innovation", "Project Management"],
-    link: "https://drive.google.com/file/d/16p0e8LtSnzqr60nBFyQQAF7dkwbLauD1/view?usp=drive_link",
-    description: "Participated in Solvit Hackathon showcasing innovative problem-solving skills. Collaborated in team-based environment to develop creative solutions. Demonstrated project management and technical implementation capabilities"
-  },
-  {
-    id: "9",
-    title: "Python Essentials",
-    organization: "VIT Bhopal",
-    date: "Jan 2024",
-    credentialId: "PYTHON-ESS-2024",
-    image: "/assets/certificates/python.jpg",
-    skills: ["Python Programming", "Data Structures", "Algorithms", "Object-Oriented Programming"],
-    link: "https://drive.google.com/file/d/16psgIUrzbJQxS0XbqtALmHQBpbtP8bcK/view?usp=drive_link",
-    description: "Comprehensive Python programming fundamentals. Mastery of core Python concepts and best practices. Practical implementation of data structures and algorithms. Object-oriented programming principles and design patterns"
-  }
-];
+import { Certificate, certificates } from "../data/certificates";
 
 export const Certifications: React.FC = () => {
   const [expandedCert, setExpandedCert] = useState<string | null>(null);
@@ -137,7 +21,7 @@ export const Certifications: React.FC = () => {
   useEffect(() => {
     if (isModalOpen) {
       // Push a new history entry when modal opens
-      window.history.pushState({ modalOpen: true }, '', window.location.href);
+      window.history.pushState({ modalOpen: true }, "", window.location.href);
 
       // Handle browser back button
       const handlePopState = (event: PopStateEvent) => {
@@ -147,8 +31,8 @@ export const Certifications: React.FC = () => {
         handleCloseModal();
       };
 
-      window.addEventListener('popstate', handlePopState);
-      return () => window.removeEventListener('popstate', handlePopState);
+      window.addEventListener("popstate", handlePopState);
+      return () => window.removeEventListener("popstate", handlePopState);
     }
   }, [isModalOpen]);
 
@@ -165,15 +49,15 @@ export const Certifications: React.FC = () => {
   const handleShowLess = () => {
     // First collapse the content
     setShowAllMobile(false);
-    
+
     // Instantly scroll to the certifications section
-    const certificationsSection = document.getElementById('certifications');
+    const certificationsSection = document.getElementById("certifications");
     if (certificationsSection) {
-      certificationsSection.scrollIntoView({ behavior: 'instant' });
+      certificationsSection.scrollIntoView({ behavior: "instant" });
     }
   };
 
-  const selectedCert = certificates.find(cert => cert.id === expandedCert);
+  const selectedCert = certificates.find((cert) => cert.id === expandedCert);
 
   // Function to get displayed certificates based on screen size
   const getDisplayedCertificates = () => {
@@ -188,77 +72,77 @@ export const Certifications: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
+    visible: { opacity: 1, y: 0 },
   };
 
   const contentVariants = {
-    collapsed: { 
+    collapsed: {
       height: 0,
       opacity: 0,
       transition: {
         duration: 0.3,
-        ease: "easeInOut"
-      }
+        ease: "easeInOut",
+      },
     },
-    expanded: { 
+    expanded: {
       height: "auto",
       opacity: 1,
       transition: {
         duration: 0.3,
-        ease: "easeInOut"
-      }
-    }
+        ease: "easeInOut",
+      },
+    },
   };
 
   const modalVariants = {
-    hidden: { 
+    hidden: {
       opacity: 0,
       scale: 0.95,
-      y: -20
+      y: -20,
     },
-    visible: { 
+    visible: {
       opacity: 1,
       scale: 1,
       y: 0,
       transition: {
         type: "spring",
         stiffness: 300,
-        damping: 30
-      }
+        damping: 30,
+      },
     },
     exit: {
       opacity: 0,
       scale: 0.95,
       y: 20,
       transition: {
-        duration: 0.2
-      }
-    }
+        duration: 0.2,
+      },
+    },
   };
 
   const overlayVariants = {
     hidden: { opacity: 0 },
-    visible: { 
+    visible: {
       opacity: 1,
-      transition: { duration: 0.2 }
+      transition: { duration: 0.2 },
     },
     exit: {
       opacity: 0,
-      transition: { duration: 0.2 }
-    }
+      transition: { duration: 0.2 },
+    },
   };
 
   const mobileExpandButtonVariants = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -20 }
+    exit: { opacity: 0, y: -20 },
   };
 
   const MobileCertContent: React.FC<{ cert: Certificate }> = ({ cert }) => (
@@ -290,20 +174,21 @@ export const Certifications: React.FC = () => {
           About this Certification
         </h4>
         <div className="space-y-3 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-          {cert.description.split(". ").map((line, i) => (
-            line && (
-              <motion.p
-                key={i}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.1 }}
-                className="flex items-start gap-2"
-              >
-                <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mt-2 shrink-0" />
-                <span>{line.trim()}.</span>
-              </motion.p>
-            )
-          ))}
+          {cert.description.split(". ").map(
+            (line, i) =>
+              line && (
+                <motion.p
+                  key={i}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  className="flex items-start gap-2"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mt-2 shrink-0" />
+                  <span>{line.trim()}.</span>
+                </motion.p>
+              )
+          )}
         </div>
       </motion.div>
 
@@ -373,13 +258,15 @@ export const Certifications: React.FC = () => {
             </div>
             Credential Details
           </h4>
-          <div className={cn(
-            "flex items-center gap-3 rounded-lg p-4",
-            "bg-gradient-to-r from-white/40 to-white/30",
-            "dark:from-black/60 dark:to-purple-950/50",
-            "backdrop-blur-md backdrop-saturate-150",
-            "border border-white/30 dark:border-purple-900/50"
-          )}>
+          <div
+            className={cn(
+              "flex items-center gap-3 rounded-lg p-4",
+              "bg-gradient-to-r from-white/40 to-white/30",
+              "dark:from-black/60 dark:to-purple-950/50",
+              "backdrop-blur-md backdrop-saturate-150",
+              "border border-white/30 dark:border-purple-900/50"
+            )}
+          >
             <div className="flex-1">
               <p className="text-xs text-gray-500 dark:text-purple-300/70">
                 Credential ID
@@ -547,7 +434,9 @@ export const Certifications: React.FC = () => {
               className="mt-8 flex justify-center md:hidden"
             >
               <motion.button
-                onClick={() => showAllMobile ? handleShowLess() : setShowAllMobile(true)}
+                onClick={() =>
+                  showAllMobile ? handleShowLess() : setShowAllMobile(true)
+                }
                 className={cn(
                   "group relative overflow-hidden",
                   "w-12 h-12 rounded-full",
@@ -573,9 +462,7 @@ export const Certifications: React.FC = () => {
                 >
                   <ChevronDown className="w-6 h-6" />
                 </motion.div>
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 dark:from-purple-900/20 dark:to-violet-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                />
+                <motion.div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 dark:from-purple-900/20 dark:to-violet-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </motion.button>
             </motion.div>
           )}
@@ -594,7 +481,7 @@ export const Certifications: React.FC = () => {
               className="fixed inset-0 bg-black/60 backdrop-blur-sm"
               onClick={handleCloseModal}
             />
-            
+
             <motion.div
               variants={modalVariants}
               initial="hidden"
@@ -659,22 +546,23 @@ export const Certifications: React.FC = () => {
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                       Description
                     </h3>
-                    {selectedCert.description.split(". ").map((line, i) => (
-                      line && (
-                        <motion.div
-                          key={i}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: i * 0.1 }}
-                          className="flex items-start gap-2"
-                        >
-                          <Sparkle className="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0 mt-1" />
-                          <p className="text-gray-700 dark:text-gray-200">
-                            {line.trim()}.
-                          </p>
-                        </motion.div>
-                      )
-                    ))}
+                    {selectedCert.description.split(". ").map(
+                      (line, i) =>
+                        line && (
+                          <motion.div
+                            key={i}
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: i * 0.1 }}
+                            className="flex items-start gap-2"
+                          >
+                            <Sparkle className="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0 mt-1" />
+                            <p className="text-gray-700 dark:text-gray-200">
+                              {line.trim()}.
+                            </p>
+                          </motion.div>
+                        )
+                    )}
                   </div>
 
                   <motion.div
@@ -753,4 +641,4 @@ export const Certifications: React.FC = () => {
       </AnimatePresence>
     </>
   );
-}; 
+};
