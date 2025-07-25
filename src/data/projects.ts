@@ -56,7 +56,7 @@ This portfolio represents my current skills and expertise in modern web developm
     id: 2,
     name: "Crack It",
     description:
-      "A beautiful weather application built with React that provides real-time weather data with stunning animations and intuitive UI.",
+      "Constructed a DSA question bank with frequency analysis using React, Firebase, and custom search algorithms.",
     detailedDescription: `A feature-rich weather application that offers:
 
 • Real-time weather data from OpenWeather API
@@ -86,7 +86,7 @@ This app demonstrates my ability to integrate external APIs and create engaging 
     id: 3,
     name: "Billify",
     description:
-      "An enhanced YouTube downloader with a modern web interface, combining Python backend with HTML, CSS, and JavaScript frontend.",
+      "A Billing Management System for creating invoices and tracking payments, which helps in reducing invoice generation time by 70%.",
     detailedDescription: `A full-stack YouTube video downloader application featuring:
 
 • Modern and responsive web interface
@@ -114,9 +114,9 @@ This version provides an intuitive user experience while maintaining powerful do
   },
   {
     id: 4,
-    name: "YouTube Downloader1",
+    name: "School Management",
     description:
-      "A Python-based YouTube video downloader with FFmpeg integration for high-quality video processing and format conversion.",
+      "An Application for Managing the day to day activites of a school, with a user friendly interface and support for different roles.",
     detailedDescription: `A powerful YouTube video downloader built with Python, featuring:
 
 • FFmpeg integration for video processing and format conversion
@@ -131,13 +131,14 @@ This tool demonstrates efficient video processing and handling of YouTube's API.
     imagePreview: "/assets/projects/You-tube-v01/1.png",
     outerPreviewImage: "/assets/projects/You-tube-v01/1.png",
     technologies: [
-      { name: "Python", percentage: 90 },
-      { name: "FFmpeg", percentage: 85 },
-      { name: "YouTube-DL", percentage: 80 },
+      { name: "React", percentage: 90 },
+      { name: "JavaScript", percentage: 85 },
+      { name: "CSS", percentage: 80 },
+      { name: "API Integration", percentage: 85 },
     ],
     contributors: [{ name: "Akshat", profilePic: "/assets/ak.jpeg" }],
-    github: "https://github.com/akshatmaheshwari1702",
-    liveDemo: "",
+    github: "https://github.com/akshatmaheshwari1702/School-Management",
+    liveDemo: "https://school-management-pi-six.vercel.app/list/teachers",
   },
   {
     id: 5,
