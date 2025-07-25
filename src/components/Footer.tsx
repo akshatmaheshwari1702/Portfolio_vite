@@ -1,16 +1,18 @@
 import React from "react";
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
+import { FaGithub } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa6";
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/akshatmaheshwari1702", label: "GitHub" },
+  { icon: FaGithub, href: "https://github.com/akshatmaheshwari1702", label: "GitHub" },
   {
     icon: Linkedin,
     href: "https://www.linkedin.com/in/akshat-maheshwari-32165b196/",
     label: "LinkedIn",
   },
-  { icon: Twitter, href: "https://x.com/Akshat0217", label: "Twitter" },
-  { icon: Mail, href: "maheshwariakshat482@gmail.com", label: "Email" },
+  { icon: FaTwitter, href: "https://x.com/Akshat0217", label: "X" },
+  // { icon: Mail, href: "maheshwariakshat482@gmail.com", label: "Email" },
 ];
 
 export const Footer: React.FC = () => {
