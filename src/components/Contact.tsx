@@ -29,7 +29,7 @@ const contactInfo: ContactInfo = {
     },
   },
   email: "maheshwariakshat482@gmail.com",
-  phone: "+91 96859 70000",
+  // phone: "+91 96859 70000",
   socials: [
     {
       platform: "GitHub",
@@ -211,7 +211,7 @@ export const Contact: React.FC = () => {
               </motion.div>
 
               {/* Phone */}
-              <motion.div
+             {/* <motion.div
                 whileHover={{ scale: 1.01 }}
                 className="group flex items-center space-x-3 p-3 rounded-lg hover:bg-white/5 dark:hover:bg-gray-800/30 transition-all duration-300"
               >
@@ -230,7 +230,7 @@ export const Contact: React.FC = () => {
                     {contactInfo.phone}
                   </a>
                 </div>
-              </motion.div>
+              </motion.div> */}
 
               {/* Address */}
               <motion.div
