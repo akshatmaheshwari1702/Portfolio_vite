@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useMediaQuery } from "react-responsive";
-import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
+import { Star, Quote} from "lucide-react";
 import { cn } from "../lib/utils";
 import type { Testimonial } from "../types";
 
@@ -225,7 +224,7 @@ export const Testimonials: React.FC = () => {
             >
               <div className={`${isMobile ? 'w-full max-w-2xl' : 'w-full max-w-6xl'} mx-4`}>
                 <div className={`${isMobile ? 'flex-col' : 'flex-row'} flex gap-6 justify-center`}>
-                  {getCurrentTestimonials().map((testimonial, index) => (
+                  {getCurrentTestimonials().map((testimonial) => (
                     <div
                       key={testimonial.id}
                       className={`bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg rounded-2xl shadow-xl p-6 md:p-8 transform transition-transform duration-300 hover:scale-[1.02] ${

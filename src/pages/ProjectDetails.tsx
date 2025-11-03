@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { motion, useMotionValue, useTransform, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaArrowLeft, FaCode, FaUsers, FaTools, FaRocket, FaCheckCircle, FaExpand, FaImage, FaPlay, FaTimes, FaChartBar, FaCalendar, FaClock, FaArrowRight } from 'react-icons/fa';
 import { projects } from '../data/projects';
 
@@ -512,12 +512,12 @@ export const ProjectDetails: React.FC = () => {
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
                       <span className="text-gray-700 dark:text-gray-300">Performance Score</span>
-                      <span className="text-blue-500 font-semibold">95%</span>
+                      <span className="text-blue-500 font-semibold">{project.highlights.performanceScore}%</span>
                     </div>
                     <div className="h-2 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
                       <motion.div
                         initial={{ width: 0 }}
-                        animate={{ width: "95%" }}
+                        animate={{ width: `${project.highlights.performanceScore}%` }}
                         transition={{ duration: 1, ease: "easeOut" }}
                         className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
                       />
@@ -526,28 +526,22 @@ export const ProjectDetails: React.FC = () => {
 
                   {/* Key Achievements */}
                   <div className="space-y-3">
-                    <div className="flex items-start gap-3 p-3 bg-white/50 dark:bg-gray-800/50 rounded-lg">
-                      <FaCheckCircle className="text-green-500 mt-1" />
-                      <span className="text-gray-700 dark:text-gray-300">Optimized for all devices</span>
-                    </div>
-                    <div className="flex items-start gap-3 p-3 bg-white/50 dark:bg-gray-800/50 rounded-lg">
-                      <FaCheckCircle className="text-green-500 mt-1" />
-                      <span className="text-gray-700 dark:text-gray-300">Fast loading times</span>
-                    </div>
-                    <div className="flex items-start gap-3 p-3 bg-white/50 dark:bg-gray-800/50 rounded-lg">
-                      <FaCheckCircle className="text-green-500 mt-1" />
-                      <span className="text-gray-700 dark:text-gray-300">SEO friendly structure</span>
-                    </div>
+                    {project.highlights.achievements.map((achievement, index) => (
+                      <div key={index} className="flex items-start gap-3 p-3 bg-white/50 dark:bg-gray-800/50 rounded-lg">
+                        <FaCheckCircle className="text-green-500 mt-1" />
+                        <span className="text-gray-700 dark:text-gray-300">{achievement}</span>
+                      </div>
+                    ))}
                   </div>
 
                   {/* Development Stats */}
                   <div className="grid grid-cols-2 gap-4">
                     <div className="text-center p-3 bg-white/50 dark:bg-gray-800/50 rounded-lg">
-                      <div className="text-2xl font-bold text-blue-500">500+</div>
+                      <div className="text-2xl font-bold text-blue-500">{project.highlights.stats.linesOfCode.toLocaleString()}+</div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">Lines of Code</div>
                     </div>
                     <div className="text-center p-3 bg-white/50 dark:bg-gray-800/50 rounded-lg">
-                      <div className="text-2xl font-bold text-blue-500">10+</div>
+                      <div className="text-2xl font-bold text-blue-500">{project.highlights.stats.components}+</div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">Components</div>
                     </div>
                   </div>
@@ -645,11 +639,11 @@ export const ProjectDetails: React.FC = () => {
                     <div className="space-y-2">
                       <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
                         <FaCalendar className="text-blue-500" />
-                        <span>Started: {new Date().toLocaleDateString()}</span>
+                        <span>Started: {project.timeline.startDate || 'Date to be added'}</span>
                       </div>
                       <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
                         <FaClock className="text-blue-500" />
-                        <span>Last Updated: {new Date().toLocaleDateString()}</span>
+                        <span>Last Updated: {project.timeline.lastUpdated || 'Date to be added'}</span>
                       </div>
                     </div>
                   </div>

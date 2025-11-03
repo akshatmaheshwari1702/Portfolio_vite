@@ -27,12 +27,12 @@ export default function Navbar({
     "about",
     // "journey",
     "skills",
+    "projects",
     "blog",
     // "gallery",
     // "cubing",
-    "projects",
     // "Gaming",
-    // "testimonials",
+    "testimonials",
     "contact"
   ];
 
