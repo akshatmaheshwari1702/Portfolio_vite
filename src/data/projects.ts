@@ -149,8 +149,8 @@ This portfolio represents my current skills and expertise in modern web developm
 
 This app demonstrates my ability to integrate external APIs and create engaging user experiences.`,
     videoPreview: "",
-    imagePreview: "/assets/projects/weather/1.png",
-    outerPreviewImage: "/assets/projects/weather/1.png",
+    imagePreview: "/assets/projects/JewelleryStore.png",
+    outerPreviewImage: "/assets/projects/JewelleryStore.png",
     technologies: [
       { name: "React Js", percentage: 90 },
       { name: "JavaScript", percentage: 85 },
@@ -196,8 +196,8 @@ This app demonstrates my ability to integrate external APIs and create engaging 
 
 This app demonstrates my ability to integrate external APIs and create engaging user experiences.`,
     videoPreview: "",
-    imagePreview: "/assets/projects/weather/1.png",
-    outerPreviewImage: "/assets/projects/weather/1.png",
+    imagePreview: "/assets/projects/Crackit.png",
+    outerPreviewImage: "/assets/projects/Crackit.png",
     technologies: [
       { name: "React", percentage: 90 },
       { name: "JavaScript", percentage: 85 },
@@ -207,10 +207,10 @@ This app demonstrates my ability to integrate external APIs and create engaging 
     ],
     contributors: [{ name: "Akshat", profilePic: "/assets/ak.jpeg" }],
     github: "https://github.com/akshatmaheshwari1702/CrackIt",
-    liveDemo: "crack-it-one.vercel.app",
+    liveDemo: "https://crack-it-one.vercel.app/",
     timeline: {
-      startDate: "", // You can add the actual start date here
-      lastUpdated: "", // You can add the last updated date here
+      startDate: "06/07/2025",
+      lastUpdated: "29/10/2025",
     },
     highlights: {
       performanceScore: 90,
@@ -243,8 +243,8 @@ This app demonstrates my ability to integrate external APIs and create engaging 
 
 This version provides an intuitive user experience while maintaining powerful download capabilities.`,
     videoPreview: "",
-    imagePreview: "/assets/projects/you-tube-v-02/1.jpeg",
-    outerPreviewImage: "/assets/projects/you-tube-v-02/1.jpeg",
+    imagePreview: "/assets/projects/Billify.png",
+    outerPreviewImage: "/assets/projects/Billify.png",
     technologies: [
       { name: "React", percentage: 90 },
       { name: "JavaScript", percentage: 85 },
@@ -256,8 +256,8 @@ This version provides an intuitive user experience while maintaining powerful do
     github: "https://github.com/akshatmaheshwari1702/Billify",
     liveDemo: "billify-beta.vercel.app",
     timeline: {
-      startDate: "", // You can add the actual start date here
-      lastUpdated: "", // You can add the last updated date here
+      startDate: "", 
+      lastUpdated: "", 
     },
     highlights: {
       performanceScore: 88,
@@ -289,8 +289,8 @@ This version provides an intuitive user experience while maintaining powerful do
 
 This tool demonstrates efficient video processing and handling of YouTube's API.`,
     videoPreview: "",
-    imagePreview: "/assets/projects/You-tube-v01/1.png",
-    outerPreviewImage: "/assets/projects/You-tube-v01/1.png",
+    imagePreview: "/assets/projects/SchoolManagement.png",
+    outerPreviewImage: "/assets/projects/SchoolManagement.png",
     technologies: [
       { name: "React", percentage: 90 },
       { name: "JavaScript", percentage: 85 },
@@ -333,7 +333,8 @@ This tool demonstrates efficient video processing and handling of YouTube's API.
 • Optimized performance and SEO-friendly structure
 
 The portfolio effectively communicates the client's brand identity while maintaining a clean and professional aesthetic.`,
-    videoPreview: "https://www.youtube.com/embed/9z46-46o3CE",
+    // videoPreview: "https://www.youtube.com/embed/9z46-46o3CE",
+    videoPreview: "",
     imagePreview: "/assets/projects/client-portfolio/1.png",
     outerPreviewImage: "/assets/projects/client-portfolio/1.png",
     technologies: [
